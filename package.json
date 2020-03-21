@@ -4,6 +4,10 @@
   "main": "index.js",
   "author": "okonomi <okonomi@oknm.jp>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development"
+  },
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
