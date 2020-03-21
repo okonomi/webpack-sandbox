@@ -1,0 +1,7 @@
+{
+  "name": "webpack-sandbox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "okonomi <okonomi@oknm.jp>",
+  "license": "MIT"
+}
