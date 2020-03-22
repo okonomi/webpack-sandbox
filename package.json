@@ -5,8 +5,8 @@
   "author": "okonomi <okonomi@oknm.jp>",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --mode production -o public/dist/main.js",
-    "build:dev": "webpack --mode development -o public/dist/main.js",
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
     "serve": "serve public"
   },
   "dependencies": {
