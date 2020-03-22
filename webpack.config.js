@@ -1,9 +1,11 @@
 const path = require('path')
 
 module.exports = {
-  entry: './src/index.tsx',
+  entry: {
+    index: './src/index.tsx',
+  },
   output: {
-    filename: 'main.js',
+    chunkFilename: '[name].js',
     path: path.resolve(__dirname, 'public/dist')
   },
   resolve: {
@@ -20,5 +22,11 @@ module.exports = {
         loader: 'ts-loader'
       }
     ]
+  },
+  optimization: {
+    splitChunks: {
+      name: 'vendors',
+      chunks: 'initial'
+    }
   }
 }

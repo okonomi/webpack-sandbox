@@ -3,4 +3,6 @@ import ReactDOM from 'react-dom'
 
 const elem = document.getElementById('react-app')
 
-ReactDOM.render(<div>hello webpack</div>, elem)
+document.addEventListener('DOMContentLoaded', () => {
+  ReactDOM.render(<div>hello webpack</div>, elem)
+})
