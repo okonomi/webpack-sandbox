@@ -1,1 +1,3 @@
-console.log("hello")
+const user: string = 'okonomi'
+
+console.log(`hello ${user}`)
