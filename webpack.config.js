@@ -1,12 +1,14 @@
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const WebpackAssetsManifest = require('webpack-assets-manifest')
 
 module.exports = {
   entry: {
     index: './src/index.tsx',
   },
   output: {
-    chunkFilename: '[name].js',
+    filename: '[name].[contenthash].js',
+    chunkFilename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'public/dist'),
     publicPath: 'dist/',
   },
@@ -33,6 +35,10 @@ module.exports = {
     }
   },
   plugins: [
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new WebpackAssetsManifest({
+      publicPath: true,
+      entrypoints: true
+    })
   ]
 }
